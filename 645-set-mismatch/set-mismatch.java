@@ -9,16 +9,13 @@ class Solution {
                 i++;
             }
         }
-        
-        int[] ans = new int[2];
 
         for(int index=0; index<nums.length; index++){
             if(nums[index] != index+1){
-                ans[0]=nums[index];
-                ans[1]=index+1;
+                return new int[] {nums[index], index+1};
             }
         }
-        return ans;
+        return new int[] {-1,-1};
     }
     
     int[] swap(int[] nums, int first, int sec){
